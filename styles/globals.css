@@ -1,16 +1,15 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  @apply text-sm md:text-base;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.def__text {
+  @apply font-normal text-base text-vpnSite-navGray leading-7;
 }
-
-* {
-  box-sizing: border-box;
+.def__text__bold {
+  @apply font-medium text-base text-vpnSite-navGray leading-7;
+}
+button {
+  @apply focus:outline-none focus:border-transparent;
 }

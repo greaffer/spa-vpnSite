@@ -1,0 +1,158 @@
+.embla {
+  position: relative;
+  padding: 20px;
+  max-width: 100%;
+  margin-right: auto;
+  display: none;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -10px;
+}
+
+.embla__slide {
+  position: relative;
+  min-width: 35.2%;
+  padding-left: 50px;
+}
+
+.embla__slide__inner {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+}
+
+.embla__slide__img {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  max-width: none;
+  transform: translate(-50%, -50%);
+}
+
+.embla__button {
+  outline: 0;
+  cursor: pointer;
+  background-color: transparent;
+  touch-action: manipulation;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.embla__button:disabled {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.embla__button__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.embla__button__prev {
+  right: 20px;
+}
+
+.embla__button__next {
+  left: 20px;
+}
+
+.embla__dots {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  padding-top: 5.15625em;
+  @apply ml-10;
+}
+
+.embla__dot {
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  background-color: #dde0e4;
+  border-radius: 50%;
+}
+
+.embla__dot.is__selected {
+  background-color: #f53838;
+  width: 45px;
+  height: 15px;
+  border-radius: 50px;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 640px) {
+  .embla {
+    margin-bottom: 5em;
+    display: inline-block;
+  }
+  .embla__button {
+    width: 45px;
+    height: 45px;
+  }
+  .embla__slide {
+    padding-left: 25px;
+    min-width: 35.2%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .embla {
+    margin-bottom: 5em;
+  }
+  .embla__button {
+    width: 50px;
+    height: 50px;
+  }
+  .embla__slide {
+    padding-left: 25px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .embla {
+    margin-left: 5.6em;
+  }
+  .embla__slide {
+    padding-left: 50px;
+  }
+}
